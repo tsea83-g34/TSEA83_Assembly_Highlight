@@ -1,0 +1,56 @@
+{
+	"name": "x83-support",
+	"displayName": "x83 Support",
+	"description": "x83 Assembly language support",
+	"version": "0.0.1",
+	"publisher": "bence",
+	"engines": {
+		"vscode": "^1.5.0"
+	},
+	"categories": [
+		"Languages"
+	],
+	"activationEvents": [
+		"onCommand:extension.sayHello"
+	],
+	"main": "./extension",
+	"contributes": {
+		"languages": [
+			{
+				"id": "avr",
+				"aliases": [
+					"x83 Assembler"
+				],
+				"extensions": [
+					".asm",
+                    ".a",
+					".inc"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "avr",
+				"scopeName": "source.avrasm",
+				"path": "./syntaxes/x83.tmLanguage"
+			}
+		]
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"typescript": "^2.0.3",
+		"vscode": "^1.0.0",
+		"mocha": "^2.3.3",
+		"eslint": "^3.6.0",
+		"@types/node": "^6.0.40",
+		"@types/mocha": "^2.2.32"
+	},
+	"__metadata": {
+		"id": "722c45db-f643-4b11-a0fa-cd183692ecf2",
+		"publisherId": "a82cc31f-c3e1-42dd-8778-25f90e0305a3",
+		"publisherDisplayName": "rockcat"
+	}
+}
