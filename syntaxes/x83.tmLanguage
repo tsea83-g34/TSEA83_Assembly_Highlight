@@ -12,13 +12,13 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>(?i)\b(add|addi|sub|subi|and|or|xor|not|neg|inc|dec|mul|rjmp|rjmprg|call|ret|cmp|cmpi|breq|brne|brgt|brlt|brge|brle|move|movhi|movlo|load|store|in|out|push|pop|lsl|lsr|nop|vgaw)\b(?i)</string>
+			<string>(?i)\b(const|add|addi|sub|subi|and|or|xor|not|neg|inc|dec|mul|rjmp|rjmprg|call|ret|cmp|cmpi|breq|brne|brgt|brlt|brge|brle|move|movhi|movlo|load|store|in|out|push|pop|lsl|lsr|nop|vgaw)\b(?i)</string>
 			<key>name</key>
 			<string>keyword.instruction.avrasm</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i)\.\b(.db|.dh|.dw|.ds|const)\b(?i)</string>
+			<string>(?i)\b(.db|.dh|.dw|.ds|const)\b(?i)</string>
 			<key>name</key>
 			<string>meta.preprocessor.directive.avrasm</string>
 		</dict>
@@ -42,7 +42,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b((r|R)(([1]?[0-9])|(3[01]))|[XYZ])\b</string>
+			<string>\b((r|R)(([1]?[0-9])|(3[01]))|[XYZ]|(SP)|(BP)|(RR)|(NULL))\b</string>
 			<key>name</key>
 			<string>variable.language.registers.avrasm</string>
 		</dict>
